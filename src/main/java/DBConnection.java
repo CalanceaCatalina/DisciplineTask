@@ -51,7 +51,7 @@ public class DBConnection {
             // Bulk insert
             System.out.print("Reading .csv file ... \n");
             String SQLBulk = "BULK INSERT sales.customers FROM 'C:\\Customers.csv' WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR='\n') ";
-            System.out.print("The .csv was read with success. In the sales.customers table were successfully added 100 customers. \n");
+            System.out.print("The .csv file was read with success. In the sales.customers table were successfully added 100 customers. \n");
 
             // Execute the SQL statement
             System.out.print("The results of the query are the following:\n");
