@@ -6,6 +6,7 @@ import java.sql.SQLException;
 public class DBConnection {
     public static void main(String[] args) {
         // Connecting to DB - SQL server
+        System.out.print("Connecting to Database ... \n");
         String DBurl = "jdbc:sqlserver://EN411812\\PERF_SQLSERVER:1433;databaseName=BikeStores;user=sa;password=Performance123!";
         System.out.print("Successful connection to SQL Server.\n");
 
@@ -48,8 +49,9 @@ public class DBConnection {
             );
 
             // Bulk insert
+            System.out.print("Reading .csv file ... \n");
             String SQLBulk = "BULK INSERT sales.customers FROM 'C:\\Customers.csv' WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR='\n') ";
-            System.out.print("In the sales.customers table were successfully added 100 customers. \n");
+            System.out.print("The .csv was read with success. In the sales.customers table were successfully added 100 customers. \n");
 
             // Execute the SQL statement
             System.out.print("The results of the query are the following:\n");
