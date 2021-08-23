@@ -52,15 +52,14 @@ public class DBConnection {
                             "where last_name = 'Grey' and first_name = 'Alice'"
             );
 
-            // Bulk insert
-            System.out.print("Reading .csv file ... \n");
-
+            // Bulk insert query
+            System.out.print("Reading the .csv file ... \n");
             stmt.executeUpdate("BULK INSERT BikeStores.sales.customers" +
                     " FROM 'C:\\Tasks\\Bulk_Data_sales_stores.csv' " +
                     " WITH ( FIRSTROW = 0," +
                     "FIELDTERMINATOR = ',', " +
                     "ROWTERMINATOR = '\\n' ) ");
-            System.out.print("The .csv file was read with success. In the sales.customers table were successfully added 100 customers. \n");
+            System.out.print("The .csv file was read with success. In the sales.customers table were successfully added 100 new customers. \n");
 
             // Execute the SQL statement
             System.out.print("The results of the query are the following:\n");
