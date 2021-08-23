@@ -25,7 +25,7 @@ public class DBConnection {
                     "insert into sales.customers " +
                             "(first_name, last_name, phone, email, street, city, state, zip_code) " +
                             "values " +
-                            "('Meredith', 'Grey', 327409, 'mgrey@gmail.com', '21 Washington street', 'Brooklyn', 'NY', 20223)"
+                            "('aMeredith', 'Grey', 327409, 'mgrey@gmail.com', '21 Washington street', 'Brooklyn', 'NY', 20223)"
             );
 
             // Insert query
