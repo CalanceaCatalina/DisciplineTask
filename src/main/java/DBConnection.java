@@ -20,7 +20,7 @@ public class DBConnection {
             // Insert query
             //executeUpdate: Returns an integer representing the number of rows affected by the SQL statement.
             //Use this method if you are using INSERT, DELETE, or UPDATE SQL statements.
-            System.out.print("Inserting a new customer Meredith Grey...\n");
+            System.out.print("Inserting a new customer - Meredith Grey...\n");
             stmt.executeUpdate(
                     "insert into sales.customers " +
                             "(first_name, last_name, phone, email, street, city, state, zip_code) " +
@@ -29,7 +29,7 @@ public class DBConnection {
             );
 
             // Insert query
-            System.out.print("Inserting a new customer Alice Grey...\n");
+            System.out.print("Inserting a new customer - Alice Grey...\n");
             stmt.executeUpdate(
                     "insert into sales.customers " +
                             "(first_name, last_name, phone, email, street, city, state, zip_code) " +
@@ -38,7 +38,7 @@ public class DBConnection {
             );
 
             // Update query
-            System.out.print("Updating customer data of Meredith Grey...\n");
+            System.out.print("Updating customer data of the customer - Meredith Grey...\n");
             stmt.executeUpdate(
                     "update sales.customers " +
                             "set email = 'meredith.grey@gmail.com'" +
@@ -46,7 +46,7 @@ public class DBConnection {
             );
 
             // Delete query
-            System.out.print("Deleting customer data of Alice Grey...\n");
+            System.out.print("Deleting customer data of the customer - Alice Grey...\n");
             stmt.executeUpdate(
                     "delete from sales.customers " +
                             "where last_name = 'Grey' and first_name = 'Alice'"
@@ -62,7 +62,7 @@ public class DBConnection {
             System.out.print("The .csv file was read with success. In the sales.customers table were successfully added 100 new customers. \n");
 
             // Execute the SQL statement
-            System.out.print("The results of the query are the following:\n");
+            System.out.print("The results of the query are:\n");
             String SQL = "SELECT * FROM sales.customers WHERE last_name = 'Grey'";
             //when we execute Statement objects, so they generate ResultSet objects, which is a table of data representing a database result set.
             ResultSet resultSet = stmt.executeQuery(SQL);
